@@ -1,0 +1,25 @@
+html {
+    font-family: "century-gothic", sans-serif;
+    background-color: white;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+#pokemon-card {
+    background-color: #061634;
+    color: white;
+    width: 5rem;
+    height: 5px;
+    text-align:left;
+    padding: 50px 25px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px grey;
+}
+
+#pokemon-icon {
+   margin: 0 auto;
+   padding: 0;
+}
