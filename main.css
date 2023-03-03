@@ -3,23 +3,21 @@ html {
     background-color: white;
 }
 
-.container {
-    margin: 0 auto;
-}
 
 #pokemon-card {
     background-color: #061634;
     color: white;
-    width: 5rem;
-    height: 5px;
+    height: 6rem;
+    width: 8rem;
     text-align:left;
-    padding: 50px 25px;
+    padding: 10px;
     margin: 20px;
     border-radius: 10px;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 5px 5px 5px #0075BE;
+    line-height: 1;
+    
 }
 
 #pokemon-icon {
-   margin: 0 auto;
-   padding: 0;
+   height: 8rem;
 }
