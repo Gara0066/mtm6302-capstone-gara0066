@@ -5,32 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/45479b93cf.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.typekit.net/vbw4mut.css">
+    <script src="https://kit.fontawesome.com/45479b93cf.js" crossorigin="anonymous"></script>
     <title>Capstone Project</title>
 </head>
 <body>
     <header>
-        <div class="container">
-            <img src="" alt="pokemon-logo"><br>
-            <div class="search">
+        <div class="banner">
+            <div class="container">
+                <img class="mainLogo" src="images/logo-1.png" alt="pokemon-logo"><br>
+                <p class="catch">Catch you <strong>Pokémon</strong></p>
                 <form action="/action_page.php">
-                  <input type="text" placeholder="Search..." name="search" id="search-bar">
-                  <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
-              </div>
+                    <input type="text" placeholder="Search..." name="search" id="search-bar">
+                </form>    
+            </div>
         </div>
     </header>
     <main>
-        <div class="container">
-            <div id="poke-list">
-                <h2>Pokémons</h2><hr>
-                <div id="pokemon-card">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" id="pokemon-icon">
-                    <p>Bulbasaur</p>
-                    <P>Poison</P><p>Grass</p>
-                </div>
+        <div id="poke-list">
+            <h2>Pokémons</h2><hr>
+            <div id="pokemon-card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" id="pokemon-icon" alt="Bulbasaur">
+                <p>Bulbasaur</p>
+                <P>Poison</P><p>Grass</p>
             </div>
+            <button id="more">Load more</button>
         </div>
     </main>
 <script src="main.js"></script>    
