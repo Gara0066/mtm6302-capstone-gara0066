@@ -10,8 +10,9 @@
     <title>Pokemon info</title>
 </head>
 <body>
+    <a href="index.html"><i class="fa-solid fa-chevron-left"></i></a>
     <div class="poster">
-         <i class="fa-solid fa-chevron-left"></i>
+         <!-- <i class="fa-solid fa-chevron-left"></i> -->
          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" id="bigger-icon" alt="Bulbasaur">
          <h1 class="h1-info">Bulbasaur #0001</h1>
     </div>
@@ -27,19 +28,37 @@
         </div> 
         <div class="type">
             <div class="wrapper">
-                <h3 class="h3-info">Type</h3>
+                <h3 class="h3-info">Type</h3><hr>
                 <span class="typeText">Water</span>
             </div>
         </div>
         <div class="stats">
             <div class="wrapper">
-                <h3 class="h3-info">Status</h3>
-                <span>HP</span>
-                <span>ATK</span>
-                <span>DFS</span>
-                <span>SATK</span>
-                <span>SDFS</span>
-                <span>SPD</span>
+                <h3 class="h3-info">Status</h3><hr>
+                <div class="progress-blue">
+                    <h4>HP</h4> <progress id="blue" value="35" max="200"></progress>
+                </div> 
+                <div class="progress-purple">
+                    <h4>ATK</h4> <progress id="purple" value="35" max="200"></progress>
+                    
+                </div> 
+                <div class="progress-green">
+                    <h4>DFS</h4> <progress id="green" value="35" max="200"></progress>
+                    
+                </div> 
+                <div class="progress-yellow">
+                    <h4>SATK</h4> <progress id="yellow" value="35" max="200"></progress>
+                    
+                </div> 
+                <div class="progress-pink">
+                    <h4>SDFS</h4> <progress id="pink" value="35" max="200"></progress>
+                    
+                </div> 
+                <div class="progress-orange">
+                    <h4>SPD</h4> <progress id="orange" value="35" max="200"></progress>
+                    
+                </div> 
+                
             </div>
         </div>
         <button class="pokeball"><img src="images/pokeball.png"></button>
