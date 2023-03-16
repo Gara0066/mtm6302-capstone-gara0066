@@ -224,6 +224,10 @@ progress {
 /*//////////////////INDEX /////////////////////////////////*/
 
 @media screen and (min-device-width: 601px) and (max-device-width: 820px){
+
+    body{
+        max-width: 820px;
+    }
     .banner {
         width: 820px;
     }
@@ -269,6 +273,50 @@ progress {
     #more {
         margin-left: 45%;
     } 
+/*******************
+********************
+******************** INFO PAGE *******************************/
 
-     
+    .fa-solid {
+        position: absolute;
+        display: flex;
+        margin-left: 95%;
+        
+        
+    }
+    .poster {
+       width: 820px;
+
+    }
+    .h1-info {
+        margin-left: 9em;
+    }
+    
+    #bigger-icon {
+       margin-left: 18em;
+    }
+    
+    .about {
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+    
+    .about p {
+        margin:20px 0;
+    }
+      
+    .wrapper {
+        max-width: 820px;
+        margin: 0 auto;
+        max-height:max-content;
+    }
+
+    hr {
+        width: 90%;
+    }
+    .aboutInfo {
+        height: 5em;
+        padding: 10px 65px;
+    }
+    
 }
