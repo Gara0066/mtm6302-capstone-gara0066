@@ -48,7 +48,7 @@ body {
     padding-bottom: 1em;
 }
 strong {
-    font-size: 25px;
+    font-size: 16px;
 }
 .container {
     max-width: 600px;
@@ -63,7 +63,7 @@ main {
 #poke-list {
     margin: 1em;
     display: grid;
-    grid-template-columns: repeat(1fr, 50%);
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
 }
 h2 {
@@ -87,10 +87,15 @@ hr {
     line-height: 1;
     
 }
+#pokemon-card p:not(:nth-child(1)) {
+    font-size: 13px;
+    position: relative;
+}
 
 #pokemon-icon {
    margin: auto;
    padding: 0;
+   position: absolute;
 }
 
 #more {
@@ -212,3 +217,58 @@ progress {
     margin-bottom: 30px;
 }
 
+/*************************
+**************************
+************************** TABLET MEDIA QUERY *************************************/
+
+/*//////////////////INDEX /////////////////////////////////*/
+
+@media screen and (min-device-width: 601px) and (max-device-width: 820px){
+    .banner {
+        width: 820px;
+    }
+    .catch {
+        margin-left: 15%;
+        word-spacing: 30px;
+    }
+
+    hr {
+        width: 820px;
+    }
+
+    main{
+        margin-left: 5em;
+    }
+
+    #poke-list {
+        margin: 1em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+    #pokemon-card {
+        height: 10rem;
+        width: 12rem;
+        
+    }   
+    
+    #pokemon-icon {
+        padding: 0;
+        position: absolute;
+     }
+     #pokemon-card {
+        display: block;
+        padding-left: 3.5em;
+        padding-top: 2em;
+        /* align-items: center; */
+        justify-content:center;
+    }
+    #pokemon-card p:not(:nth-child(2)){
+        margin-top: 5em;
+    }
+    #more {
+        margin-left: 45%;
+    } 
+
+     
+}
