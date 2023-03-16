@@ -25,3 +25,10 @@ The branding for this pokedex is in accordance with the olready stablished POKEM
 same logo for continuity.
 It will be an easy to use pokedex with a button shaped like a pokeball that allows the user to catch their
 favorite pokemons.
+
+The first step in creating a Pokedex prototype was to plan and design the layout of the page. I decided to create a simple design with a search bar, a list of Pokemon, and a section for displaying information about a selected Pokemon. I started coding the HTML markup for the Pokedex prototype, added a search bar using the input tag and a list of Pokemon (added the pokemon card design but will retrieve the list of pokemon using POKEAPI).Another html was created to display the pokemon information.
+Challenges that I have creating this project are:
+1. Struggling in creating a seamless responsive design.(At some point breaks, the layout get lost)
+2. I was unable to change direction of progress to place them side by side in a vertical position.
+3. Unable to change the color of progress bar.
+4. I will verify if the progress bar option is covenient for this prototype, otherwise I will try to change the display with Javascript.
