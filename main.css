@@ -39,6 +39,10 @@ body {
     background-color: hsl(0, 100%, 80%);
     box-shadow:inset 0 2px 2px #949494;
 }
+#search-bar:hover {
+    cursor:text;
+
+}
 .catch {
     color: #fff;
     padding-bottom: 1em;
@@ -102,7 +106,10 @@ hr {
 }
 
 
-/*****************************INFO PAGE**********************************/
+/***************************
+****************************
+****************************INFO PAGE**********************************/
+
 .fa-solid {
     position: absolute;
     display: flex;
@@ -168,7 +175,8 @@ hr {
 }
 
 .stats {
-    display: block;
+    display: flex;
+    justify-content: space-between;
 }
 
 .h4 {
@@ -177,10 +185,19 @@ hr {
 	margin-bottom: 10px;
 }
 progress {
-    width: 100%;
-    height: 35px;
-
+    width: 80%;
+    height: 38px;
 }
+.progress-blue, .progress-purple, .progress-green, .progress-yellow, .progress-pink, .progress-orange {
+    display: flex;
+    justify-content:space-between;
+}
+.progress-blue h4, .progress-purple h4, .progress-green h4, .progress-yellow h4, .progress-pink h4, .progress-orange h4 {
+    padding-top: 6px;
+}
+/* #blue {
+    background-color: #FFCC00;
+} */
 
 .pokeball {
     height: 100px;
