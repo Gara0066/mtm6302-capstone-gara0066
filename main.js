@@ -31,23 +31,27 @@ async function getPokemonCards() {
   return pokemonCards;
 }
 
-////////*****Define an asynchronous function to render the Pokémon cards on the page**********///////////
 async function renderPokemonCards(searchTerm) {
-  const pokemonCards = await getPokemonCards();
-  const filteredPokemonCards = pokemonCards.filter(pokemon => pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()));
-  pokeList.innerHTML = '';
-  filteredPokemonCards.forEach(pokemon => {
-    const card = document.createElement('a');
-    card.href = `info.html?name=${pokemon.name}`;
-    card.classList.add('card');
-    card.innerHTML = `
-      <img src="${pokemon.image}" alt="${pokemon.name}">
-      <h3>${pokemon.name}</h3>
-      <p>${pokemon.types.join(' / ')}</p>
-    `;
-    pokeList.appendChild(card);
-  });
-}
+    const pokemonCards = await getPokemonCards();
+    const filteredPokemonCards = pokemonCards.filter(pokemon => pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    pokeList.innerHTML = '';
+    filteredPokemonCards.forEach(pokemon => {
+      const card = document.createElement('a');
+      card.href = `info.html?name=${pokemon.name}`;
+      card.classList.add('card');
+      card.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.href = event.currentTarget.href;
+      });
+      card.innerHTML = `
+        <img src="${pokemon.image}" alt="${pokemon.name}">
+        <h3>${pokemon.name}</h3>
+        <p>${pokemon.types.join(' / ')}</p>
+      `;
+      pokeList.appendChild(card);
+    });
+  }
+
 ////********Function to use load more button****/////
 loadMoreButton.addEventListener('click', () => {
   offset += limit;

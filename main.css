@@ -202,22 +202,43 @@ progress {
 .progress-blue h4, .progress-purple h4, .progress-green h4, .progress-yellow h4, .progress-pink h4, .progress-orange h4 {
     padding-top: 6px;
 }
-/* #blue {
-    background-color: #FFCC00;
-} */
-
-.pokeball {
-    height: 100px;
-    border: none;
-    background-color: transparent;
-}
 
 .pokeball img {
     height: 100px;
-    margin-left: 125px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    
 }
+
+
+.pokeball {
+    border: none;
+    bottom: 40px;
+    right: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(1,.02,0,1);
+  }
+  
+  .pokeball:hover {
+    animation: pokeball-hover 1s forwards;
+  }
+  
+  .pokeball.clicked {
+    animation: pokeball-clicked 0.5s;
+  }
+  
+  @keyframes pokeball-clicked {
+    0% {
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        transform: rotate(180deg) scale(2.5);
+      }
+      100% {
+        transform: rotate(360deg) scale(1);
+        box-shadow: none;
+      }
+    }
+  
 
 /*************************
 **************************
