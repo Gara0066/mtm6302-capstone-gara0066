@@ -226,6 +226,7 @@ progress {
 @media screen and (min-device-width: 820px) and (max-device-width: 1200px){
 
     body{
+        width: 820px;
         max-width: 1200px;
     }
     .banner {
