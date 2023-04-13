@@ -54,7 +54,6 @@ strong {
     max-width: 600px;
     margin: 0 auto;
     max-height:max-content;
-    overflow: hidden;
 }
 
 main {
@@ -69,6 +68,28 @@ main {
 h2 {
     font-size: 18px;
 }
+.favorites {
+    margin-top: 20px;
+    background-color: rgb(220,220,220, .5);
+  }
+  
+  .favorites h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .favorites ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .favorites li {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
 hr {
     border-top: 2px solid #0075BE;
     width: 320px;
@@ -118,7 +139,7 @@ p {
 ****************************INFO PAGE**********************************/
 
 .fa-solid {
-    position: absolute;
+    position: relative;
     display: flex;
     margin-left: 85%;
     margin-top: 1em;
@@ -141,7 +162,7 @@ p {
 #bigger-icon {
    height: 100px;
    margin-left: 55px;
-   height: 250px;
+   height: 150px;
 }
 .about {
     margin-top: 20px;
@@ -297,8 +318,8 @@ progress {
 @media screen and (min-width: 820px) and (max-width: 1200px){
 
     body{
-        width: 820px;
         max-width: 1200px;
+        margin: auto;
     }
     .banner {
         width: 1200px;
@@ -407,6 +428,8 @@ progress {
     .progress-blue, .progress-purple, .progress-green, .progress-yellow, .progress-pink, .progress-orange, .progress-container {
         width: 90%;
         height: 40px;
+        margin-top: auto;
+        margin-bottom: 20px;
     }
       .stats .wrapper {
     display: flex;

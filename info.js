@@ -1,8 +1,7 @@
-//////////////********FOR THE INFO PAGE********////////////////
-////**DEFINES VARIABLE USING LOCAL STORAGE */
-const pokeID = `${localStorage.getItem('pokeID')}`;
+// //////////////********FOR THE INFO PAGE********////////////////
 
-// Replaces each pokemon DATA//
+
+// Populate the HTML elements with the data
 const apiUrl = `https://pokeapi.co/api/v2/pokemon/${localStorage.getItem('pokeID')}`;
 fetch(apiUrl)
   .then(response => response.json())
@@ -40,10 +39,38 @@ function populateElements(data) {
   spdProgress.style.width = `${data.stats[5].base_stat}%`;
 }
 
-///*****Function to click button***** */
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//**DEFINES VARIABLE FOR BUTTON/FAVOURITE/DATA */
 const pokeballButton = document.querySelector('.pokeball');
+const favoritePokemon = JSON.parse(localStorage.getItem('favoritePokemon')) || [];
+const pokeID = `${localStorage.getItem('pokeID')}`;
 
+// Add an event listener to the pokeballButton element
 pokeballButton.addEventListener('click', () => {
+  //'clicked' class on the pokeballButton element
   pokeballButton.classList.toggle('clicked');
-});
+  
+  // Check if the current pokemon is already in favorites
+  if (!favoritePokemon.find(pokemon => pokemon.id === pokeID)) {
+    // Add the current pokemon to favorites array
+    favoritePokemon.push({
+      id: pokeID, // add the id of the current pokemon to the favorites object
+      name: document.querySelector('.h1-info').textContent, // add the name of the current pokemon to the favorites object
+      image: document.getElementById('bigger-icon').src // add the image URL of the current pokemon to the favorites object
+    });
+    // Store the updated favorites array in the browser's local storage
+    localStorage.setItem('favoritePokemon', JSON.stringify(favoritePokemon));
+  }
+  
+  // Select the favorites section and its associated ul element
+  const favoritesSection = document.querySelector('.favorites');
+  const favoritesList = favoritesSection.querySelector('ul');
 
+  // Get the list of favorite pokemon from localStorage and populate the favorites list
+  favoritesList.innerHTML = favoritePokemon.map(pokemon => `<li>${pokemon.name}</li>`).join('');
+});  
