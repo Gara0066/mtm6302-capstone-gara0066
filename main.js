@@ -41,6 +41,7 @@ async function renderPokemonCards(searchTerm) {
       card.classList.add('card');
       card.addEventListener('click', (event) => {
         event.preventDefault();
+        localStorage.setItem('pokeID', pokemon.name);
         window.location.href = event.currentTarget.href;
       });
       card.innerHTML = `

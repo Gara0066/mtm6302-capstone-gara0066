@@ -127,7 +127,7 @@ p {
 }
 
 .poster {
-    background-image: linear-gradient(to bottom, #0075be, #95a0c9, #ffffff);
+    background-image: linear-gradient(to bottom, #fb1b1b, #b60707, #ffffff);
     height:20em ;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -190,6 +190,7 @@ p {
     display: flex;
 	justify-content: space-between;
 	margin-bottom: 10px;
+
 }
 progress {
     width: 80%;
@@ -198,9 +199,47 @@ progress {
 .progress-blue, .progress-purple, .progress-green, .progress-yellow, .progress-pink, .progress-orange {
     display: flex;
     justify-content:space-between;
+    margin-top: 20px;
+    margin-left: 3em;
 }
+.progress-blue {
+    width: 100%;
+    height: 25px;
+    background-image: linear-gradient(to bottom, #00578d, #363c65, #35263e, #22151e, #000000);
+  }
+  
+  .progress-purple {
+    width: 100%;
+    height: 25px;
+    background-image: linear-gradient(to bottom, #6b0080, #5c0054, #440432, #270919, #000000);
+  }
+  
+  .progress-green {
+    width: 100%;
+    height: 25px;
+    background-image: linear-gradient(to bottom, #79be00, #000000);
+  }
+  
+  .progress-yellow {
+    width: 100%;
+    height: 25px;
+    background-image: linear-gradient(to bottom, #e4ec06, #4b4500);
+  }
+  
+  .progress-pink {
+    width: 100%;
+    height: 25px;
+    background-image: linear-gradient(to bottom, #e0054e, #a41542, #6c1831, #38131e, #000000);  }
+  
+  .progress-orange {
+    width: 100%;
+    height: 25px;
+    background-image: linear-gradient(to bottom, #e4a002, #000000);
+  }
+  
 .progress-blue h4, .progress-purple h4, .progress-green h4, .progress-yellow h4, .progress-pink h4, .progress-orange h4 {
     padding-top: 6px;
+    margin-left: -3em;
 }
 
 .pokeball img {
