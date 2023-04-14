@@ -92,8 +92,8 @@ h2 {
   
 hr {
     border-top: 2px solid #0075BE;
-    width: 320px;
-     margin-bottom: 1em;
+    width: auto;
+    margin-bottom: 1em;
 }
 
 .card {
@@ -191,6 +191,7 @@ p {
     max-width: 600px;
     margin: 25px 25px;
     max-height:max-content;
+    width: -webkit-fill-available;
 }
 .h3-info {
     font-size: 14px;
@@ -321,7 +322,7 @@ progress {
 
 /*//////////////////INDEX /////////////////////////////////*/
 
-@media screen and (min-width: 820px) and (max-width: 1200px){
+@media screen and (min-width: 820px){
 
     body{
         max-width: 1200px;
@@ -335,9 +336,6 @@ progress {
         word-spacing: 30px;
     }
 
-    hr {
-       max-width: 1000px;
-    }
 
     main{
         margin-left: 5em;
@@ -407,7 +405,7 @@ progress {
     .about p {
         margin:20px 0;
     }
-      
+   
     .wrapper {
         max-width: 1200px;
         margin: 0 auto;
@@ -417,12 +415,16 @@ progress {
     hr {
         width: 90%;
     }
-    .aboutInfo {
-        height: 3.5em;
-        padding: 5px 65px;
-        margin-left: 3em;
-    }
     
+    .aboutInfo {
+        text-align: center;
+        display: inline-block;
+        margin: 0 auto;
+        width: 20em;
+        margin-inline: 20px;
+      }
+      
+  
     .h3-info {
         font-size: 18px;
         margin-top: 1em;
