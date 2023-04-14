@@ -54,6 +54,7 @@ const pokeID = `${localStorage.getItem('pokeID')}`;
 pokeballButton.addEventListener('click', () => {
   //'clicked' class on the pokeballButton element
   pokeballButton.classList.toggle('clicked');
+  console.log()
   
   // Check if the current pokemon is already in favorites
   if (!favoritePokemon.find(pokemon => pokemon.id === pokeID)) {
