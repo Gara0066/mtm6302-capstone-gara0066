@@ -63,7 +63,77 @@ loadMoreButton.addEventListener('click', () => {
 searchInput.addEventListener('input', () => {
   renderPokemonCards(searchInput.value);
 });
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+///**FAVOURITE SECTION/ ADDS THE SELECTE POKEMON / FUNCTION TO DELETE IT FROM LIST */
+// renderPokemonCards('');
+// const favoritePokemon = JSON.parse(localStorage.getItem('favoritePokemon'));
+
+// if (favoritePokemon){
+  
+//   // Select the favorites section and its associated ul element
+//   const favoritesSection = document.querySelector('.favorites');
+//   const favoritesList = favoritesSection.querySelector('ul');
+
+//   // Use Promise.all() to wait for all API requests to complete
+//   Promise.all(favoritePokemon.map(async (pokemon) => {
+//     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.id}`);
+//     const data = await response.json();
+//     return { ...pokemon, image: data.sprites.front_default };
+//   })).then((favoritesWithImages) => {
+//     // Update the favorites list with the name, image and delete button of each favorite Pokemon
+//     favoritesList.innerHTML = favoritesWithImages.map((pokemon) => {
+//       return `<li><img src="${pokemon.image}"><button class="delete-button" data-id="${pokemon.id}">&#x2715;</button>${pokemon.name}</li>`;
+//     }).join('');
+
+//     // Add event listeners to the delete buttons to remove the corresponding Pokemon from the list of favorites
+//     const deleteButtons = document.querySelectorAll('.delete-button');
+//     deleteButtons.forEach((button) => {
+//       button.addEventListener('click', (event) => {
+//         const pokemonId = event.target.dataset.id;
+//         const newFavoritePokemon = favoritePokemon.filter((pokemon) => pokemon.id !== pokemonId);
+//         localStorage.setItem('favoritePokemon', JSON.stringify(newFavoritePokemon));
+//         event.target.parentElement.remove();
+//       });
+//     });
+//   });
+// }
 
 renderPokemonCards('');
+const favoritePokemon = JSON.parse(localStorage.getItem('favoritePokemon'));
 
+if (favoritePokemon){
+  
+  // Select the favorites section and its associated ul element
+  const favoritesSection = document.querySelector('.favorites');
+  const favoritesList = favoritesSection.querySelector('ul');
+
+  // Use Promise.all() to wait for all API requests to complete
+  Promise.all(favoritePokemon.map(async (pokemon) => {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.id}`);
+    const data = await response.json();
+    return { ...pokemon, image: data.sprites.front_default };
+  })).then((favoritesWithImages) => {
+    // Update the favorites list with the name, image, and delete button of each favorite Pokemon
+    favoritesList.innerHTML = favoritesWithImages.map((pokemon) => {
+      return `<li><img src="${pokemon.image}"><button class="delete-btn" data-id="${pokemon.id}">&#x2715;</button></li>`;
+    }).join('');
+
+    // Add click event listener to delete button
+    const deleteButtons = favoritesList.querySelectorAll('.delete-btn');
+    deleteButtons.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        const pokemonId = event.target.dataset.id;
+        const updatedFavorites = favoritePokemon.filter((pokemon) => pokemon.id !== pokemonId);
+        localStorage.setItem('favoritePokemon', JSON.stringify(updatedFavorites));
+        event.target.parentNode.remove(); // Remove the pokemon list item from the favorites list
+      });
+    });
+  });
+}
+
+  
+
+  
 

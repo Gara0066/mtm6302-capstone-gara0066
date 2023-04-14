@@ -47,7 +47,7 @@ function populateElements(data) {
 
 //**DEFINES VARIABLE FOR BUTTON/FAVOURITE/DATA */
 const pokeballButton = document.querySelector('.pokeball');
-const favoritePokemon = JSON.parse(localStorage.getItem('favoritePokemon')) || [];
+const favoritePokemon = JSON.parse(localStorage.getItem('favoritePokemon'));
 const pokeID = `${localStorage.getItem('pokeID')}`;
 
 // Add an event listener to the pokeballButton element
@@ -71,7 +71,4 @@ pokeballButton.addEventListener('click', () => {
   // Select the favorites section and its associated ul element
   const favoritesSection = document.querySelector('.favorites');
   const favoritesList = favoritesSection.querySelector('ul');
-
-  // Get the list of favorite pokemon from localStorage and populate the favorites list
-  favoritesList.innerHTML = favoritePokemon.map(pokemon => `<li>${pokemon.name}</li>`).join('');
 });  

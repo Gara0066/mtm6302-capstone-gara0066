@@ -65,8 +65,10 @@ main {
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
 }
-h2 {
+#poke-list h2 {
     font-size: 18px;
+    margin: 20px 0;
+    z-index: 9;
 }
 .favorites {
     margin-top: 20px;
@@ -131,9 +133,22 @@ p {
     font-family: "century-gothic", sans-serif;
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 2em;
 }
 
-
+.favorites li button {
+    background-color: #fb1b1b;
+    color: #fff; 
+    border: none; 
+    border-radius: 50%; 
+    font-size: 12px;
+    padding: 0.3em 0.5em; 
+    margin-left: 1em; 
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
 /***************************
 ****************************
 ****************************INFO PAGE**********************************/
@@ -477,6 +492,16 @@ progress {
     margin: 2em;
   }
 
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* optional: center the list horizontally */
+    flex-wrap: wrap; /* optional: wrap the items to a new line when there is not enough space */
+  }
+  
+  li {
+    margin: 0 10px; /* optional: add some spacing between the items */
+  }
 }
 
   
