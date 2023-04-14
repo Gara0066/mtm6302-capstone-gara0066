@@ -212,6 +212,11 @@ p {
 .stats {
     display: flex;
     justify-content: space-between;
+   
+}
+.stats .wrapper {
+    position: relative;
+    overflow: auto;
 }
 
 .h4 {
@@ -223,6 +228,7 @@ p {
 progress {
     width: 80%;
     height: 38px;
+    
 }
 .progress-container {
     height: 25px;
@@ -397,17 +403,20 @@ progress {
         margin-right: auto;
         display: block;
       }
-    .about {
-        margin-left: 1em;
-        margin-right: 1em;
+    .about span {
+        margin-inline: 2em;
+        width: 400px;
+        margin-top: 2em;
       }
     
     .about p {
         margin:20px 0;
     }
-   
+   .about .wrapper {
+    margin: 0 auto;
+   }
     .wrapper {
-        max-width: 1200px;
+        max-width: 1800px;
         margin: 0 auto;
         max-height:max-content;
     }
@@ -437,6 +446,12 @@ progress {
     .stats {
         display: block;
     }
+    .container {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      
     .progress-blue, .progress-purple, .progress-green, .progress-yellow, .progress-pink, .progress-orange, .progress-container {
         width: 90%;
         height: 40px;
@@ -448,13 +463,26 @@ progress {
     flex-direction: column;
   }
 
-  .stats .progress-bar {
+    .stats .progress-bar {
     margin-bottom: 20px;
   }
+
   .pokeball img {
-        height: 100px;
-        margin-top: 100px;
+    height: 150px;
+    bottom: 0;
+    right: 150px;
 }
+
+  .pokeball-btn {
+    margin: 2em;
+  }
+
 }
+
+  
+  
+  
+  
+
 
     
