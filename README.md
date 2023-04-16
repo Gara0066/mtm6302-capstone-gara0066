@@ -32,3 +32,9 @@ Challenges that I have creating this project are:
 2. I was unable to change direction of progress to place them side by side in a vertical position.
 3. Unable to change the color of progress bar.
 4. I will verify if the progress bar option is covenient for this prototype, otherwise I will try to change the display with Javascript.
+
+Final Thoughts
+
+It was a fun but definetely challenging and stressful project. One of the biggest challenges I faced was trying to figure out what functions or processes to use in JavaScript. It was difficult to identify the exact steps required to achieve certain outcomes.To get inspiration and guidance, I watched a ton of YouTube videos that demonstrated similar projects. Additionally, I had to seek help from my professor on multiple occasions.
+Another challenge was making the Pokedex design responsive. I had to make sure that the layout looked great on both desktop and mobile devices. This required a lot of trial and error to ensure that the design elements would adapt well to various screen sizes. Some elements were off when changing the screen size, and it took some time to identify what tag to target and what value I needed to add, change or remove.
+Overall, I feel really proud of the end result. The Pokedex turned out to be a great application that is both functional and visually appealing. 
